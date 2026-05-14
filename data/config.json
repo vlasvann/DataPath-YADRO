@@ -1,0 +1,10 @@
+{
+  "memory_limit_bytes": 1048576,
+  "temp_dir": "tmp",
+  "delays": {
+    "read_ms": 0,
+    "write_ms": 0,
+    "move_ms": 0,
+    "rewind_ms": 0
+  }
+}
