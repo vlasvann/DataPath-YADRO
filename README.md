@@ -19,6 +19,7 @@ TapeSort/
 ├── COMMON/           # общие константы
 ├── TOOLS/            # утилиты для перевода txt <-> bin
 ├── data/             # примеры входных данных и конфигов
+├── tests/            # unit-тесты GoogleTest
 └── CMakeLists.txt
 ```
 
@@ -32,6 +33,7 @@ TapeSort/
 C++20
 CMake 3.16+
 nlohmann/json v3.12.0 через FetchContent
+GoogleTest v1.14.0 через FetchContent
 ```
 
 ---
@@ -169,6 +171,13 @@ cmake -S . -B build -DTAPESORT_BUILD_TOOLS=OFF
 cmake --build build
 ```
 
+Сборка с юнит-тестами:
+
+```bash
+cmake -S . -B build-tests -DTAPESORT_BUILD_TESTS=ON
+cmake --build build-tests
+```
+
 ---
 
 ## Запуск
@@ -206,3 +215,8 @@ cat data/output.txt
 Служебная память объектов, путей, файловых потоков и небольших структур слияния не учитывается как часть основного буфера сортировки.
 
 Временные run-файлы являются аналогом временных лент и хранятся на диске.
+
+
+## Тестирование
+
+Unit-тесты находятся в папке `tests/`.
